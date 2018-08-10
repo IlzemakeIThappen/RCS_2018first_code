@@ -1,0 +1,13 @@
+﻿@using WEB1.Models
+@model ContactModel
+
+<h>Tālrunis: </b><span>@Model.Phone</span>
+<br/>
+<h>E-pasts: </b><span>@Model.EMail</span>
+<br />
+<!--komentars -->
+    <b>Adrese:  </b>
+    <span>
+    @(Model.Location.Country),
+    @(Model.Location.City)
+    </span>
