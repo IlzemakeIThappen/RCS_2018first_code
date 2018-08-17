@@ -22,6 +22,85 @@ public class Desas {
         System.out.println();
         System.out.println();
     }
+    public void speletajaGajiens(){
+        int izvele;
+        int rinda=0;
+        int kolonna=0;
+        if(iet=='X'){
+            System.out.println("Spēlētāja nr.1 gājiens (X}:");
+        }else if(iet =='O'){
+            System.out.println("Spēlētaāja Nr.2 gājiens (O)");
+        }
+        switch(izvele){
+          case '1':
+            rinda=0;
+            kolonna=0;
+            break;
+            
+          case '2':
+            rinda=0;
+            kolonna=1;
+            break;
+            
+          case '3':
+            rinda=0;
+            kolonna=2;
+            break;
+            
+          case '4':
+            rinda=1;
+            kolonna=0;
+            break;
+            
+          case '5':
+            rinda=1;
+            kolonna=1;
+            break;
+            
+          case '6':
+            rinda=1;
+            kolonna=2;
+            break;
+            
+          case '7':
+            rinda=2;
+            kolonna=0;
+            break;
+            
+          case '8':
+            rinda=2;
+            kolonna=1;
+            break;
+            
+          case '9':
+            rinda=2;
+            kolonna=2;
+            
+            default:
+                System.out.println("Kļūda ievadē");
+                speletajaGajiens();
+            break;
+            
+        }
+        if (iet == 'X' && funkcija[rinda][kolonna] != 'X' && funkcija[rinda][kolonna] != 'O')
+    {
+        funkcija[rinda][kolonna] = 'X';
+        iet = 'O';
+    }
+    else if (iet == 'O' && funkcija[rinda][kolonna] != 'X' && funkcija[rinda][kolonna] != 'O')
+    {
+        funkcija[rinda][kolonna] = 'O';
+        iet = 'X';
+    }
+    else
+    {
+        System.out.println("Laukums jau ir izmantots, ludzu izvelieties citu laukumu");
+        
+        speletajaGajiens();
+    }
+    }
+}
+}
    /*
     while (funkcija[i][j] == 'x' || funkcija[i][j] == 'o') {
                 System.out.println("šis laukums ir aizņemts!");
@@ -38,8 +117,7 @@ public class Desas {
     switch 
     
   */
-}
-}
+
 
 
     
